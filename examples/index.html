@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Примеры</title>
+      <style type="text/css">
+
+      body {
+        margin: 0 auto;
+        max-width: 1200px; 
+      }
+      .list .item {
+        display: grid; 
+        grid-template-columns: 300px 1fr 1fr;
+        height: 25px;
+        border-bottom: 1px solid #ececec; 
+        padding: 8px;
+      }
+
+      .item.header {
+        font-weight: bold;
+      }
+      </style>
+  </head>
+  <body>
+    <h2>Примеры Summernote </h2>
+
+    <div class='list'>
+      <div class='item header'>
+        <div class='title'>Название(Ссылка)</div>
+        <div class='description'>Описание</div>
+        <div class='version'>Версия поддержки</div>
+      </div>
+      <div class='list-body' id='listBody'></div>
+    </div>
+    
+    <script type="text/javascript">
+    var samples = [
+      { title: 'Языки', link : 'lang-ru.html', description: 'Настройка ru языка поддержки', support: 'bs3, bs4, lite'},
+      { title: 'Languages', link : 'lang.html', description: 'Настройка языков поддержки', support: 'bs3, bs4, lite'},      
+      { title: 'Запись нажатия клавиш', link : 'recordEveryKeyStroke.html', description: 'Настройка языка поддержки', support: 'bs3, bs4, lite'},      
+      { title: 'hint-emoji', link : 'hint-emoji.html', description: 'тест смайлов ', support: 'bs3, bs4, lite'},
+      { title: 'hint-userdefine', link : 'hint-userdefine.html', description: 'тестовая подсказка userdefine ', support: 'bs3, bs4, lite'},
+      { title: 'hint-symbol', link : 'hint-symbols_mathematical-symbols_Greek-letters.html', description: 'тестовый символ подсказки ', support: 'bs3, bs4, lite'},
+      { title: 'jQuery custom event', link : 'jquery-custom-event.html', description: 'тест пользовательского события jQuery ', support: 'bs3, bs4, lite'},
+      { title: 'Plugin : Hello', link : 'plugin-hello.html', description: 'Образец плагина - Здравствуйте', support: 'bs3, bs4, lite'},
+      { title: 'Limited history stack', link : 'history-limit.html', description: 'Ограниченный стек истории', support: 'bs3, bs4, lite'},
+      { title: 'Mode Switcher', link : 'mode-switcher.html', description: 'Смена режима - По умолчанию/Воздух', support: 'bs3, bs4, lite'},      
+      { title: 'Air Mode', link : 'airmode.html', description: 'работа в авиарежиме', support: 'bs3, bs4, lite'},      
+      { title: 'Air Mode with scroll', link : 'airmode-scroll.html', description: 'работа в авиарежиме с прокруткой', support: 'bs3, bs4, lite'},      
+      { title: 'Внешний конструктор CodeMirror', link : 'external-codemirror.html', description: 'поддержка внешнего кодового зеркала', support: 'bs3, bs4, lite'},            
+      { title: 'With jQuery Migrate', link : 'bs4-with-jquery-migrate.html', description: 'поддержка jquery-migrate', support: 'bs3, bs4, lite'},
+    ]
+    function generate_sample_pages() {
+      var html = samples.map(it => {
+   
+          return   "<div class='item'>" + 
+          "<div class='title'>" + 
+              "<a href='/examples/"+it.link+"' target='summernote_window'>" + it.title + "</a>" + 
+          "</div>" + 
+          "<div class='description'>" + it.description + "</div>" + 
+          "<div class='version'>"  + it.support + "</div>" + 
+          "</div>"
+      }).join('')
+
+      document.getElementById('listBody').innerHTML = html 
+    }
+
+    generate_sample_pages();
+    </script>
+
+  </body>
+  
+</html>
