@@ -1,12 +1,12 @@
 {
-  "name": "summernote",
-  "description": "Super simple WYSIWYG editor",
+  "name": "prosto-sammernote",
+  "description": "Супер простой WYSIWYG-редактор.",
   "version": "0.8.18",
   "license": "MIT",
-  "keywords": ["editor", "WYSIWYG"],
+  "keywords": [],
   "repository": {
     "type": "git",
-    "url": "https://github.com/warsan/summernote.git"
+    "url": "https://github.com/warsan/prosto-summernote.git"
   },
   "author": {
     "name": "hackerwins",
