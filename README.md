@@ -103,3 +103,5 @@ https://github.com/summernote/summernote/blob/develop/.github/CONTRIBUTING.md
 ### Лицензия
 
 Summernote может свободно распространяться по лицензии MIT.
+
+[![Правка на StackBlitz ⚡️](https://raw.githubusercontent.com/warsan/gsap-react-route-anim-expro/master/but.svg)](https://stackblitz.com/edit/prosto-summernote)
